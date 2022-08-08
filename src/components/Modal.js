@@ -7,14 +7,10 @@ export const InputContext = createContext();
 const Modal = ({ isVisible, toggle, templateName }) => {
   const Template = lazy(() => import(`./modalTemplates/${templateName}`));
 
-  const handleToggle = (e) => {
-    e.target.className.indexOf("modal-overlay") === 0 && toggle();
-  };
-
   return (
     isVisible &&
     createPortal(
-      <aside onClick={(e) => handleToggle(e)} className="modal-overlay">
+      <aside id="modal-overlay" onClick={(e) => e.target.id === "modal-overlay" && toggle()}>
         <Suspense fallback={<p>Chargement...</p>}>
           <Template />
         </Suspense>

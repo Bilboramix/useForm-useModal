@@ -1,4 +1,12 @@
-.modal-overlay {
+#root {
+  display: flex;
+}
+.container {
+  border: 1px solid blue;
+  margin: 20px;
+  padding: 20px;
+}
+#modal-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
