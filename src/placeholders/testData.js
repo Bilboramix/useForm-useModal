@@ -1,8 +1,8 @@
 const testUser = {
   sculptures: [
     { author: "jean", name: "sculpture1", material: "wood", isAvailable: true },
-    { author: "michel", name: "sculpture1", material: "volcano stone", isAvailable: false },
-    { author: "dureté", name: "sculpture1", material: "marble", isAvailable: true },
+    { author: "michel", name: "sculpture2", material: "volcano stone", isAvailable: false },
+    { author: "dureté", name: "sculpture3", material: "marble", isAvailable: true },
   ],
   animals: [
     { _id: 0, name: "jean", race: "persan", specie: "cat" },

@@ -65,6 +65,35 @@ function App() {
           </div>
         ))}
       </div>
+      <div className="container">
+        <button
+          onClick={() => {
+            toggleModal();
+            setTemplateName("SculptureForm");
+            setItemToModify(null);
+          }}
+        >
+          ajouter une sculpture
+        </button>
+        {testData.sculptures.map((sculpture) => (
+          <div className="item" key={sculpture._id}>
+            <h4>Author : {sculpture.author}</h4>
+            <h4>Name : {sculpture.name}</h4>
+            <h4>Material : {sculpture.material}</h4>
+            <h4>Is available : {sculpture.isAvailable ? "yes" : "no"}</h4>
+
+            <button
+              onClick={() => {
+                toggleModal();
+                setTemplateName("SculptureForm");
+                setItemToModify(sculpture);
+              }}
+            >
+              modifier
+            </button>
+          </div>
+        ))}
+      </div>
       <Modal isVisible={isVisible} toggle={toggleModal} templateName={templateName} />
     </Context.Provider>
   );
