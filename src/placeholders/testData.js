@@ -7,12 +7,12 @@ const testUser = {
   animals: [
     { _id: 0, name: "jean", race: "persan", specie: "cat" },
     { _id: 1, name: "rené", race: "chowchow", specie: "dog" },
-    { _id: 2, name: "michel", race: "asian rondoudou", specie: "elephant" },
+    { _id: 2, name: "michel", race: "asian", specie: "elephant" },
   ],
   jobs: [
-    { _id: 0, name: "tourneur", structure: "la tournure céleste", actualJob: true },
-    { _id: 1, name: "rouleur", structure: "bad turn", actualJob: false },
-    { _id: 2, name: "tournoyeur", structure: "gravity turn", actualJob: false },
+    { _id: 0, name: "développeur", structure: "microsoft", actualJob: true },
+    { _id: 1, name: "designer", structure: "google", actualJob: false },
+    { _id: 2, name: "chef de projet", structure: "facebook", actualJob: false },
   ],
 };
 
