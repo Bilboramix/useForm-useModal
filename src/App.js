@@ -1,7 +1,7 @@
 import "./App.css";
 import Modal from "./components/Modal";
 import useModal from "./utils/hooks/useModal";
-import { useState, createContext } from "react";
+import React, { useState, createContext } from "react";
 import testData from "./placeholders/testData";
 export const Context = createContext();
 function App() {
@@ -93,6 +93,17 @@ function App() {
             </button>
           </div>
         ))}
+      </div>
+      <div className="container">
+        <button
+          onClick={() => {
+            toggleModal();
+            setTemplateName("LoginForm");
+            setItemToModify(null);
+          }}
+        >
+          Login
+        </button>
       </div>
       <Modal isVisible={isVisible} toggle={toggleModal} templateName={templateName} />
     </Context.Provider>

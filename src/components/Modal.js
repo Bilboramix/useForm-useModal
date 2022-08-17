@@ -1,8 +1,6 @@
-import { useState } from "react";
-import { createContext } from "react";
+import React from "react";
 import { Suspense, lazy } from "react";
 import { createPortal } from "react-dom";
-export const InputContext = createContext();
 
 const Modal = ({ isVisible, toggle, templateName }) => {
   const Template = lazy(() => import(`./modalTemplates/${templateName}`));
